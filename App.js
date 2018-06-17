@@ -1,21 +1,23 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import TextInputHandler from './src/components/TextInputExamples/TextInputHandler';
 
 export default class App extends React.Component {
+  
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Manoj</Text>
+      <View style={styles.one}>
+        <TextInputHandler/>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ff0000',
-    alignItems: 'center',
-    justifyContent: 'center',
+  one: {
+    flex:1,
+    justifyContent:"flex-start",
+    alignItems:"center",
+    // backgroundColor: "#ffffe0"
   },
 });
