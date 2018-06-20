@@ -8,12 +8,6 @@ export default class StopWatch extends React.Component {
         startTime:0,
         stopWatchStatus: false
     }
-    // // Toggle the state every second
-    // setInterval(() => {
-      
-    //   this.setState({
-    //   });
-    // }, 1000);
   }
   startButton=()=>{
       let startTime = Date.now()-this.state.startTime;
@@ -41,7 +35,7 @@ export default class StopWatch extends React.Component {
     
     return (
       <View style={styles.container}>
-        <Text style={styles.header}>StopWatch</Text>
+        <Text style={styles.header}>Stop Watch</Text>
         <View style={styles.stopWatchView}>
             <Text style={styles.stopWatchText}>{this.state.startTime}ms</Text>
         </View>
