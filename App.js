@@ -1,13 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import TextInputHandler from './src/components/TextInputExamples/TextInputHandler';
+// import TextInputHandler from './src/components/TextInputExamples/TextInputHandler';
+import StopWatch from './src/components/StopWatch/StopWatch';
 
 export default class App extends React.Component {
   
   render() {
     return (
       <View style={styles.one}>
-        <TextInputHandler/>
+        <StopWatch/>
       </View>
     );
   }
