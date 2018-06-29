@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, TextInput, Button, Alert, StyleSheet, TouchableOpacity } from 'react-native';
+import {Text, ScrollView, View, TextInput, Button, Alert, StyleSheet, TouchableOpacity } from 'react-native';
 
 const ListItem = (props) =>{
   let data = `${props.number+1}. ${props.places}`;
@@ -62,12 +62,12 @@ export default class TextInputExamples extends React.Component {
       );
     });
     return (
-      <View style={styles.outerView}>
-        <View style={styles.inputView}>
+      <View horizontal={true} style={styles.outerView}>
+        <View horizontal={true} style={styles.inputView}>
             <TextInput style={styles.textinputstyle} value={this.state.text} placeholder="Type your name pls" onChangeText={(text) => this.TextHandler(text)} />
             <Button style={styles.textButton} title="Click" color="#841584" onPress={this.touchHandler}/>
         </View>
-        <View style={styles.listcontainer}>{repeatItem}</View>
+        <ScrollView style={styles.listcontainer}>{repeatItem}</ScrollView>
       </View>
     );
   }
@@ -102,7 +102,8 @@ const styles = StyleSheet.create({
   },
   listcontainer:{
     width: "100%",
-    marginTop:10
+    marginTop:10,
+    // flexDirection: "row",
     // backgroundColor:"#ffb6c1"
   }
 });
